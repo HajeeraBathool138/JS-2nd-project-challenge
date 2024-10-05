@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Color Search Engine</title>
     <style>
         * {
             margin: 0;
@@ -12,12 +12,17 @@
         }
 
         body {
-            width: 98%;
-            height: 97vh;
-            display: flex;
-            justify-content: center;
-            margin-top: 150px;
             background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhQLRmqDmBes-H-DtEBOaEr7EyC1Puo97Deg&s);
+        }
+
+        .main {
+            width: 98%;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
         }
 
         input#searchinput {
@@ -31,9 +36,7 @@
         ul#searchul {
             list-style: none;
             background-color: white;
-            position: relative;
-            top: -10px;
-            border-radius: 3px;
+            border-radius: 35px;
             padding-top: 0px;
             display: flex;
             flex-direction: column;
@@ -41,13 +44,25 @@
             gap: 10px;
             justify-content: center;
         }
+
+        .explanation {
+            text-align: center;
+            font-size: 21px;
+        }
     </style>
 </head>
 
 <body>
-    <div>
-        <input type="text" placeholder="Search" id="searchinput">
-        <ul id="searchul"></ul>
+    <div class="main">
+        <div class="explanation">
+            <h4>Color Search Concepts To Use: Arrays, Loops, DOM Manipulation.</h4>
+            <p>Description: Develop a color search tool where users can type the name of a color, and the app displays a
+                list of matching colors along with their corresponding hex codes.</p>
+        </div>
+        <div>
+            <input type="text" placeholder="Search" id="searchinput">
+            <ul id="searchul"></ul>
+        </div>
     </div>
     <script>
         let colors = [
